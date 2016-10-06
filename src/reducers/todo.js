@@ -1,4 +1,4 @@
-import { ADD_TODO } from '../actions/types'
+import { ADD_TODO, TOGGLE_TODO } from '../actions/types'
 
 const initialState = []
 
@@ -13,6 +13,12 @@ const todoReducer = (state = initialState, action) => {
         newTodo,
         ...state,
       ]
+    }
+    case TOGGLE_TODO: {
+      return state.map(todo => (
+         action.payload.text === todo.text ?
+          { text: todo.text, complete: !todo.complete } : todo
+      ))
     }
     default: {
       return state
