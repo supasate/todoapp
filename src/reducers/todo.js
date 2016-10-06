@@ -7,6 +7,7 @@ const todoReducer = (state = initialState, action) => {
     case ADD_TODO: {
       const newTodo = {
         text: action.payload.text,
+        complete: false,
       }
       return [
         newTodo,
