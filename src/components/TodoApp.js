@@ -1,5 +1,5 @@
 import React from 'react'
-import TodoInput from './TodoInput'
+import TodoInput from '../containers/TodoInput'
 import TodoList from '../containers/TodoList'
 
 const TodoApp = () => (
