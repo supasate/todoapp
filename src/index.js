@@ -4,6 +4,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import TodoApp from './components/TodoApp'
 import rootReducer from './reducers'
+import './styles.css'
 
 const initialState = {
   todos: [
