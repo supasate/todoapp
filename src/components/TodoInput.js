@@ -13,20 +13,20 @@ class TodoInput extends Component {
   addTodo() {
     this.props.addTodo(this.state.currentText)
     this.setState({
-      currentText: ''
+      currentText: '',
     })
   }
   addTodoOnEnter(event) {
     if (event.keyCode === 13) {
       this.props.addTodo(this.state.currentText)
       this.setState({
-        currentText: ''
+        currentText: '',
       })
     }
   }
   changeText(event) {
     this.setState({
-      currentText: event.target.value
+      currentText: event.target.value,
     })
   }
   render() {
@@ -42,6 +42,10 @@ class TodoInput extends Component {
       </div>
     )
   }
+}
+
+TodoInput.propTypes = {
+  addTodo: React.PropTypes.func.isRequired,
 }
 
 export default TodoInput
