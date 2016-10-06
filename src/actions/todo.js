@@ -1,4 +1,4 @@
-import { ADD_TODO } from './types'
+import { ADD_TODO, TOGGLE_TODO } from './types'
 
 const addTodo = text => ({
   type: ADD_TODO,
@@ -7,6 +7,14 @@ const addTodo = text => ({
   },
 })
 
+const toggleTodo = text => ({
+  type: TOGGLE_TODO,
+  payload: {
+    text,
+  },
+})
+
 export {
-  addTodo, // eslint-disable-line
+  addTodo,
+  toggleTodo,
 }
